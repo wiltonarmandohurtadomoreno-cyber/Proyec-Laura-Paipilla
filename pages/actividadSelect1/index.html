@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Select</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="actividad">
+
+            <h2 class="text-center mb-4">
+                Selecciona la respuesta correcta
+            </h2>
+
+            <div class="row text-center">
+
+                <div class="col-md-4 mb-4">
+
+                    <img src="img/oso.jpeg"
+                        class="imagen">
+
+                    <select class="form-select mt-3 respuesta" data-correcta="Omnivoro">
+
+                        <option value="">Seleccione</option>
+                        <option>Herviboro</option>
+                        <option>Omnivoro</option>
+                        <option>Oviparo</option>
+                    
+                    </select>
+
+                </div>
+
+      
+                <div class="col-md-4 mb-4">
+
+                    <img src="img/azul.png"
+                        class="imagen">
+
+                    <select class="form-select mt-3 respuesta" data-correcta="Blue">
+
+                        <option value="">Seleccione</option>
+                        <option>Green</option>
+                        <option>Blue</option>
+                        <option>Pink</option>
+
+                    </select>
+
+                </div>
+
+             
+                <div class="col-md-4 mb-4">
+
+                    <img src="img/pentagono.png"
+                        class="imagen">
+
+                    <select class="form-select mt-3 respuesta" data-correcta="Pentagono">
+
+                        <option value="">Seleccione</option>
+                        <option>Rectangulo</option>
+                        <option>Pentagono</option>
+                        <option>Hexagono</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <button class="btn btn-success" onclick="verificar()">
+                    Verificar
+                </button>
+
+                <button class="btn btn-primary" onclick="reiniciar()">
+                    Reiniciar
+                </button>
+
+            </div>
+
+            <div id="resultado" class="resultado">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <audio id="audioBien" src="audios/bien.mp3"></audio>
+    <audio id="audioMal" src="audios/twin.mp3"></audio>
+    <audio id="audioAplausos" src="audios/aplausos.mp3"></audio>
+
+  
+ 
+
+</body>
+
+</html>
