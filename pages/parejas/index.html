@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+      <div class="container">
+
+        <div class="actividad">
+
+            <h2 class="text-center mb-5">
+                Encuentra las parejas
+            </h2>
+
+            <div class="tablero">
+
+        
+                <div class="carta" data-imagen="img/balon.png">
+                    <img src="" class="imagen-carta">
+                </div>
+
+                <div class="carta" data-imagen="img/cancha.png">
+                    <img src="img/interrogacion.png" class="imagen-carta">
+                </div>
+
+                <div class="carta" data-imagen="img/lapiz.png">
+                    <img src="img/interrogacion.png" class="imagen-carta">
+                </div>
+
+                <div class="carta" data-imagen="img/balon.png">
+                    <img src="img/interrogacion.png" class="imagen-carta">
+                </div>
+
+                <div class="carta" data-imagen="img/cancha.png">
+                    <img src="img/interrogacion.png" class="imagen-carta">
+                </div>
+
+                <div class="carta" data-imagen="img/lapiz.png">
+                    <img src="img/interrogacion.png" class="imagen-carta">
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <button class="btn btn-primary" onclick="reiniciar()">
+                    Reiniciar
+                </button>
+
+            </div>
+
+            <div id="mensajeFinal" class="mensaje-final">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <audio id="audioBien" src="audios/success.mp3"></audio>
+    <audio id="audioMal" src="audios/twin.mp3"></audio>
+    <audio id="audioAplausos" src="audio/aplausos.mp3"></audio>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
