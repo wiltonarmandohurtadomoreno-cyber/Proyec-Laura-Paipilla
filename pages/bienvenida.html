@@ -1,0 +1,102 @@
+<!-- Modal de bienvenida -->
+<div class="modal fade" id="modalBienvenida" tabindex="-1"
+     aria-labelledby="tituloBienvenida" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-bienvenida">
+
+      <div class="modal-header-custom">
+      <img src="img/logo-laura.png"
+            class="img-logo">
+        <h2 id="tituloBienvenida" class="mb-0">¡Hola!</h2>
+      </div>
+
+      <div class="modal-body px-4 pt-4 pb-2 text-center">
+        <p class="fs-5">
+          Bienvenido/a <strong id="nombre"></strong> al proyecto: <strong>La Importancia De La Didáctica En El Aprendizaje.</strong>
+        </p>
+        <p class="text-muted">
+          Utiliza el menú de navegación para explorar cada uno de los apartados.
+        </p>
+        <div class="alert alert-info mt-4 mb-0 text-start">
+          ℹ️ Este sitio fue diseñado para facilitar la consulta y presentación del proyecto.
+        </div>
+      </div>
+
+      <div class="modal-footer border-0 justify-content-center pb-4">
+        <button type="button" class="btn btn-entrar" data-bs-dismiss="modal" onclick="cargarpagina('inicio.html')" style="background-color:#00a8ff;">
+          Comenzar a explorar →
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="space_divider"></div>
+
+<style>
+    .modal-bienvenida {
+  border: none;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header-custom {
+  background: #00a8ff;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+}
+
+.icono-bienvenida {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.modal-bienvenida #nombre {
+  color: #1a2e3d;
+}
+
+.btn-entrar {
+  background: #5a7a9a;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  
+}
+
+.btn-entrar:hover {
+    background: #5a7a9a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Animación de entrada */
+.modal.fade .modal-dialog {
+  transform: scale(0.85);
+  transition: transform 0.35s ease-out;
+}
+.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+/* Fondo difuminado */
+.modal-backdrop.show {
+  opacity: 0.6;
+  backdrop-filter: blur(4px);
+}
+</style>
+
+<script>
+  
+</script>

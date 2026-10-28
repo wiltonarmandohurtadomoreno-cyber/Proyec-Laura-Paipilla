@@ -1,0 +1,208 @@
+<div class="space_divider"></div>
+
+
+<div id="carouselIA" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselIA" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselIA" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselIA" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img src="img/Banner1.png" class="d-block w-100 carousel-img" alt="">
+            <div class="carousel-overlay"></div>
+
+            
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img src="img/Banner2.png" class="d-block w-100 carousel-img" alt="">
+            <div class="carousel-overlay"></div>
+
+           
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <img src="img/Banner3.png" class="d-block w-100 carousel-img" alt="">
+            <div class="carousel-overlay"></div>
+
+            
+        </div>
+
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIA" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIA" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+
+
+<section class="container my-5">
+    <h2 class="text-center section-title">Galería de videos</h2>
+    <p class="text-center mb-4">
+        Haz clic en cada video para verlo en una ventana modal.
+    </p>
+
+    <div class="row g-4">
+
+        <!-- Video 1 -->
+        <div class="col-md-4">
+            <div class="card video-card h-100">
+                <img src="img/miniatura1.png" class="card-img-top" alt="Video 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">La Didáctica </h5>
+                    <p class="card-text"></p>
+                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Ver Video</button>
+                </div>
+            </div>
+        </div>
+
+           <!-- Video 2 -->
+        <div class="col-md-4">
+            <div class="card video-card h-100">
+                <img src="img/miniatura2.png" class="card-img-top" alt="Video 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Galería de evidencias </h5>
+                    <p class="card-text"></p>
+                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Ver Video</button>
+                </div>
+            </div>
+        </div>
+
+
+                 <!-- Video 3 -->
+        <div class="col-md-4">
+            <div class="card video-card h-100">
+                <img src="img/miniatura3.png" class="card-img-top" alt="Video 3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Galería de evidencias </h5>
+                    <p class="card-text"></p>
+                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Ver Video</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
+
+<div class="modal fade" id="modal1">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5>Video 1</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+    <div class="container-fluid">
+
+                       <video 
+                        id="videoPlayer" 
+                        class="w-100" 
+                        controls 
+                        
+                    >
+                        <source id="videoSource" src="video/video1.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modal2">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5>Video 2</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+    <div class="container-fluid">
+
+                       <video 
+                        id="videoPlayer" 
+                        class="w-100" 
+                        controls 
+                        
+                    >
+                        <source id="videoSource" src="video/video2.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modal3">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5>Video 3</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+    <div class="container-fluid">
+
+                       <video 
+                        id="videoPlayer" 
+                        class="w-100" 
+                        controls 
+                        
+                    >
+                        <source id="videoSource" src="video/video3.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modal4">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5>Video 4</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+   
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="espacio"></div>

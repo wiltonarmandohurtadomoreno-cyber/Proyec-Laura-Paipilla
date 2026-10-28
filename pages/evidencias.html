@@ -1,0 +1,365 @@
+<!-- ===================== SECCIÓN EVIDENCIAS ===================== -->
+<style>
+  .evidencias-section {
+    --ev-primario: #2f5d9e;
+    --ev-acento: #f4a62a;
+    --ev-fondo: #f5f8fc;
+    --ev-tarjeta: #ffffff;
+    --ev-texto: #2b2f36;
+    --ev-suave: #6b7480;
+    --ev-borde: #e3e9f2;
+    background: var(--ev-fondo);
+    padding: 3rem 1rem;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ev-texto);
+  }
+
+  .evidencias-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Encabezado ---------- */
+  .evidencias-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .evidencias-header .ev-icono {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
+  .evidencias-header .ev-etiqueta {
+    display: inline-block;
+    background: rgba(47, 93, 158, .1);
+    color: var(--ev-primario);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .35rem .9rem;
+    border-radius: 999px;
+    margin-bottom: .75rem;
+  }
+  .evidencias-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--ev-primario);
+    margin: 0 0 .5rem;
+  }
+  .evidencias-header p {
+    color: var(--ev-suave);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Índice de actividades ---------- */
+  .ev-indice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 2.5rem;
+  }
+  .ev-indice a {
+    text-decoration: none;
+    background: var(--ev-tarjeta);
+    border: 1px solid var(--ev-borde);
+    color: var(--ev-texto);
+    font-size: .9rem;
+    padding: .45rem 1rem;
+    border-radius: 999px;
+    transition: all .2s ease;
+  }
+  .ev-indice a:hover {
+    background: var(--ev-primario);
+    border-color: var(--ev-primario);
+    color: #fff;
+  }
+
+  /* ---------- Tarjeta de actividad ---------- */
+  .ev-actividad {
+    background: var(--ev-tarjeta);
+    border: 1px solid var(--ev-borde);
+    border-radius: 18px;
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px rgba(30, 50, 80, .06);
+    scroll-margin-top: 90px;
+  }
+  .ev-actividad-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .ev-numero {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--ev-primario);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ev-actividad-head h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ev-texto);
+  }
+  .ev-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-top: .35rem;
+  }
+  .ev-tag {
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .2rem .65rem;
+    border-radius: 999px;
+    background: rgba(244, 166, 42, .15);
+    color: #a8670a;
+  }
+
+  /* ---------- Galería ---------- */
+  .ev-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .ev-galeria figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--ev-borde);
+    background: #eef2f7;
+    aspect-ratio: 4 / 3;
+  }
+  .ev-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+    cursor: zoom-in;
+  }
+  .ev-galeria figure:hover img {
+    transform: scale(1.05);
+  }
+
+  /* ---------- Descripción ---------- */
+  .ev-descripcion {
+    border-left: 4px solid var(--ev-acento);
+    background: #fffaf1;
+    padding: 1rem 1.25rem;
+    border-radius: 0 12px 12px 0;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .ev-descripcion strong {
+    color: var(--ev-primario);
+  }
+
+  /* ---------- Visor de imagen ---------- */
+  .ev-visor {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 25, .85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+    cursor: zoom-out;
+  }
+  .ev-visor.abierto { display: flex; }
+  .ev-visor img {
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+  }
+
+  @media (max-width: 576px) {
+    .ev-actividad { padding: 1.25rem; }
+    .evidencias-header h2 { font-size: 1.8rem; }
+    .ev-actividad-head h3 { font-size: 1.15rem; }
+  }
+</style>
+
+<section class="evidencias-section">
+  <div class="evidencias-container">
+
+  <h2 class="titulo-actividades">Evidencias de las actividades</h2>
+  <p class="descripcion-actividades">
+    Selecciona el menú de abajo para navegar por las actividades.
+  </p>
+
+    <!-- Índice -->
+    <nav class="ev-indice">
+      <a href="#act-1">1. Concentración</a>
+      <a href="#act-2">2. Genially</a>
+      <a href="#act-3">3. Dibujo en el tablero</a>
+      <a href="#act-4">4. Ver conocimiento</a>
+      <a href="#act-5">5. Sistema solar</a>
+      <a href="#act-6">6. Cartelera creativa</a>
+    </nav>
+
+    <!-- Actividad 1 -->
+    <article class="ev-actividad" id="act-1">
+      <div class="ev-actividad-head">
+        <div class="ev-numero">1</div>
+        <div>
+          <h3>Actividad de concentración</h3>
+          <div class="ev-tags">
+            <span class="ev-tag">Trabajo colaborativo</span>
+            <span class="ev-tag">Cálculo mental</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev-galeria">
+        <figure><img src="img/doc1.png" alt="Actividad de concentración - evidencia 1"></figure>
+        <figure><img src="img/doc2.png" alt="Actividad de concentración - evidencia 2"></figure>
+      </div>
+      <p class="ev-descripcion">
+        Esta actividad consistió en que todo el salón realizara una suma cuyo resultado debía ser <strong>45</strong>. Los estudiantes iban sumando o restando, llevando la cuenta del resultado, hasta que el último estudiante llegara al total, sin dejar caer la pelota; quien la dejaba caer quedaba eliminado, lo que significaba un punto menos para su mesa. Esto se enlaza con la metodología <strong>Escuela Activa</strong> del colegio, ya que promueve el trabajo colaborativo: cada mesa necesita unión para no dejar caer la pelota y llegar al total.
+      </p>
+    </article>
+
+    <!-- Actividad 2 -->
+    <article class="ev-actividad" id="act-2">
+      <div class="ev-actividad-head">
+        <div class="ev-numero">2</div>
+        <div>
+          <h3>Actividad en Genially</h3>
+          <div class="ev-tags">
+            <span class="ev-tag">Evaluación</span>
+            <span class="ev-tag">Competencia por mesas</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev-galeria">
+        <figure><img src="img/doc3.png" alt="Actividad Genially - evidencia"></figure>
+      </div>
+      <p class="ev-descripcion">
+        Esta actividad buscó poner a prueba los conocimientos adquiridos durante el proceso académico. En cada mesa se seleccionó a un estudiante, quien debía responder en un tiempo aproximado de <strong>1 minuto</strong>; de este modo, cada mesa iba ganando y acumulando puntos.
+      </p>
+    </article>
+
+    <!-- Actividad 3 -->
+    <article class="ev-actividad" id="act-3">
+      <div class="ev-actividad-head">
+        <div class="ev-numero">3</div>
+        <div>
+          <h3>Dibujo en el tablero</h3>
+          <div class="ev-tags">
+            <span class="ev-tag">Explicación del tema</span>
+            <span class="ev-tag">Saberes previos</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev-galeria">
+        <figure><img src="img/doc4.png" alt="Dibujo en el tablero - evidencia 1"></figure>
+        <figure><img src="img/doc5.png" alt="Dibujo en el tablero - evidencia 2"></figure>
+      </div>
+      <p class="ev-descripcion">
+        Antes de realizar la actividad, di una breve explicación del tema mediante un dibujo hecho por mí en el tablero, y formulé preguntas para <strong>explorar los conocimientos previos</strong> de los estudiantes.
+      </p>
+    </article>
+
+    <!-- Actividad 4 -->
+    <article class="ev-actividad" id="act-4">
+      <div class="ev-actividad-head">
+        <div class="ev-numero">4</div>
+        <div>
+          <h3>Actividad para ver el conocimiento</h3>
+          <div class="ev-tags">
+            <span class="ev-tag">Diagnóstico</span>
+            <span class="ev-tag">Ejemplos cotidianos</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev-galeria">
+        <figure><img src="img/doc6.png" alt="Ver conocimiento - evidencia 1"></figure>
+        <figure><img src="img/doc7.png" alt="Ver conocimiento - evidencia 2"></figure>
+      </div>
+      <p class="ev-descripcion">
+        Después de poner a los estudiantes en contexto, presenté la actividad para evaluar su conocimiento, relacionándolo con ejemplos cotidianos. <strong>Conclusión:</strong> los estudiantes tienen conocimiento del tema; sin embargo, aún les falta afianzarlo para no confundirse.
+      </p>
+    </article>
+
+    <!-- Actividad 5 -->
+    <article class="ev-actividad" id="act-5">
+      <div class="ev-actividad-head">
+        <div class="ev-numero">5</div>
+        <div>
+          <h3>Actividad del sistema solar</h3>
+          <div class="ev-tags">
+            <span class="ev-tag">Trabajo en equipo</span>
+            <span class="ev-tag">Completar</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev-galeria">
+        <figure><img src="img/doc8.png" alt="Sistema solar - evidencia 1"></figure>
+        <figure><img src="img/doc9.png" alt="Sistema solar - evidencia 2"></figure>
+        <figure><img src="img/doc10.png" alt="Sistema solar - evidencia 3"></figure>
+      </div>
+      <p class="ev-descripcion">
+        Después de la explicación del tema, formulé preguntas para conocer lo que habían comprendido y luego realizaron esta actividad: completar la información de cada planeta según lo aprendido, trabajando por mesas. Así se enlaza un aspecto importante de la metodología del colegio, que se basa en el <strong>trabajo en equipo</strong>.
+      </p>
+    </article>
+
+    <!-- Actividad 6 -->
+    <article class="ev-actividad" id="act-6">
+      <div class="ev-actividad-head">
+        <div class="ev-numero">6</div>
+        <div>
+          <h3>Cartelera creativa del sistema solar</h3>
+          <div class="ev-tags">
+            <span class="ev-tag">Creatividad</span>
+            <span class="ev-tag">Arte y ciencia</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev-galeria">
+        <figure><img src="img/doc11.png" alt="Cartelera sistema solar - evidencia 1"></figure>
+        <figure><img src="img/doc12.png" alt="Cartelera sistema solar - evidencia 2"></figure>
+      </div>
+      <p class="ev-descripcion">
+        Finalmente, apliqué un ejercicio para estimular su <strong>creatividad</strong>: elaboraron una cartelera en la que plasmaron el sistema solar, recortando los planetas que habían completado y pintándolos según lo aprendido.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- Visor para ampliar imágenes al hacer clic -->
+<div class="ev-visor" id="evVisor"><img src="" alt="Imagen ampliada"></div>
+<script>
+  (function () {
+    var visor = document.getElementById('evVisor');
+    var imgVisor = visor.querySelector('img');
+    document.querySelectorAll('.ev-galeria img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        imgVisor.src = img.src;
+        imgVisor.alt = img.alt;
+        visor.classList.add('abierto');
+      });
+    });
+    visor.addEventListener('click', function () { visor.classList.remove('abierto'); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') visor.classList.remove('abierto');
+    });
+  })();
+</script>
+
+<div class="espacio"></div>
+<!-- =================== FIN SECCIÓN EVIDENCIAS =================== -->
