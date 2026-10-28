@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Didáctica Educativa</title>
+
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="css/bootstrapV5.3.2.css">
+
+
+</head>
+
+<body>
+  <!-- Pantalla de Login -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-box">
+      <h1 class="text-title text-center mb-4">Bienvenido</h1>
+      <p class="text-center text-login">La Importancia De La Didáctica En El Aprendizaje</p>
+      <div class="text-center">
+      <img src="img/logo-laura.png" width="200" height="200" alt="Imagen de bienvenida" class="img-logo-login">
+      </div>
+      <form id="formLogin">
+        <input type="text" id="inputNombre" class="form-control mb-3" placeholder="Ingrese su nombre">
+        <button type="submit" class="btn-temas w-100">Ingresar</button>
+      </form>
+      <div id="alertContainer"></div>
+    </div>
+  </div>
+
+  <!-- Contenido de la aplicación -->
+  <div id="appContent" style="display:none;">
+  <header>
+    <div class="logo"><a class="navbar-brand" href="javascript:cargarpagina('inicio.html')"><img src="img/logo-laura.png" alt="" width="50px" height="50px"></a></div>
+    <nav>
+      <ul>
+       <!-- <li><a href="javascript:cargarPagina('inicio.html')">Inicio</a></li>-->
+
+            <!-- Contexto -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" 
+                       role="button" data-bs-toggle="dropdown">
+                        Contexto
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('Planteamientodelproblema.html')">
+                                Planteamiento del problema
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('Objetivos.html')">
+                                Objetivos
+                            </a>
+                        </li>
+ 
+                        <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('Resumen.html')">
+                                Resumen
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('marco.html')">
+                                Marco de referencia
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Ruta del proyecto -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" 
+                       role="button" data-bs-toggle="dropdown">
+                        Ruta del proyecto
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('introduccion.html')">
+                                Introducción
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('justificacion.html')">
+                                Justificación
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('evidencias.html')">
+                                Evidencias 
+                            </a>
+                        </li>
+                           <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('conclusiones.html')">
+                               Conclusiones
+                            </a>
+                        </li>
+
+                           <li>
+                            <a class="dropdown-item" href="javascript:cargarpagina('Documento.html')">
+                               Documento
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                
+           
+       
+            <li><a href="javascript:cargarpagina('actividades.html')">Actividades</a></li>
+       
+        <li><a href="javascript:cargarpagina('juego.html')">Juego</a></li>
+        <li><a href="javascript:cargarpagina('creditos.html')">Créditos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="contenido"></div>
+
+
+  <footer>
+    <div> 2026 Colegio Gimnasio Santander de Tunja (Tiene derechos de autor) - Laura Paipilla</div>
+
+    <img src="img/logo.png" alt="Escudo" class="escudo">
+  </footer>
+
+  </div>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+<script src="js/main.js"></script>
+ 
+
+</body>
+</html>
+<body>
+   
