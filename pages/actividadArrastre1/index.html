@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Arrastrar y Soltar</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="actividad">
+
+            <h2 class="text-center mb-4">
+                Actividad de Arrastre
+            </h2>
+
+            <div class="row">
+
+
+                <div class="col-md-6 text-center" id="contenedorImagenes">
+
+                    <img src="img/tierra.png" class="imagen" id="imgTierra" draggable="true"
+                        ondragstart="arrastrar(event)">
+
+                    <img src="img/venus.png" class="imagen" id="imgVenus" draggable="true" ondragstart="arrastrar(event)">
+
+                    <img src="img/marte.jpeg" class="imagen" id="imgMarte" draggable="true"
+                        ondragstart="arrastrar(event)">
+
+                </div>
+
+              >
+                <div class="col-md-6">
+
+                    <div class="zona" data-imagen="imgTierra" ondragover="permitirDrop(event)" ondrop="soltar(event)">
+                     Tierra
+                    </div>
+
+                    <div class="zona" data-imagen="imgVenus" ondragover="permitirDrop(event)" ondrop="soltar(event)">
+                        Venus
+                    </div>
+
+                    <div class="zona" data-imagen="imgMarte" ondragover="permitirDrop(event)" ondrop="soltar(event)">
+                        Marte
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="mensajeFinal" class="mensaje-final">
+
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" onclick="reiniciar()">
+                    Reiniciar Actividad
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <audio id="audioBien" src="audios/success.mp3"></audio>
+    <audio id="audioMal" src="audios/twin.mp3"></audio>
+    <audio id="audioAplausos" src="audios/aplausos.mp3"></audio>
+
+</body>
+
+</html>
